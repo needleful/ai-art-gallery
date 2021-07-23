@@ -1,0 +1,73 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://ui/icons/cursor.png" type="Texture" id=1]
+[ext_resource path="res://ui/windows/dia_test.gd" type="Script" id=2]
+[ext_resource path="res://ui/dia_screens/dai_theme.tres" type="Theme" id=3]
+
+[node name="Control" type="Control"]
+margin_right = 512.0
+margin_bottom = 512.0
+theme = ExtResource( 3 )
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect" type="ColorRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 0.447059, 0.427451, 0.603922, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button" type="Button" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -80.5
+margin_top = -19.0
+margin_right = 80.5
+margin_bottom = 19.0
+theme = ExtResource( 3 )
+text = "PRESS ME"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="HSlider" type="HSlider" parent="."]
+margin_top = 314.31
+margin_right = 512.0
+margin_bottom = 330.31
+
+[node name="WindowDialog" type="AcceptDialog" parent="."]
+visible = true
+margin_left = 54.2551
+margin_top = 53.0
+margin_right = 314.255
+margin_bottom = 199.0
+window_title = "Wow!"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="RichTextLabel" type="RichTextLabel" parent="WindowDialog"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 8.0
+margin_top = 8.0
+margin_right = -8.0
+margin_bottom = -54.0
+text = "Thank you for this God given day!"
+
+[node name="cursorLayer" type="CanvasLayer" parent="."]
+
+[node name="cursor" type="Node2D" parent="cursorLayer"]
+position = Vector2( 256, 256 )
+
+[node name="sprite" type="Sprite" parent="cursorLayer/cursor"]
+position = Vector2( 8, 8 )
+texture = ExtResource( 1 )
+
+[connection signal="pressed" from="Button" to="." method="_on_Button_pressed"]

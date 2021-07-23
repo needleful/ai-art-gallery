@@ -1,0 +1,64 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://env/door.gd" type="Script" id=1]
+
+[sub_resource type="BoxShape" id=3]
+extents = Vector3( 0.557283, 0.0916298, 0.0997656 )
+
+[sub_resource type="BoxShape" id=4]
+extents = Vector3( 0.473469, 1.23366, 0.025 )
+
+[sub_resource type="CubeMesh" id=1]
+size = Vector3( 1, 2.5, 0.06 )
+
+[sub_resource type="CapsuleMesh" id=2]
+radius = 0.05
+mid_height = 0.1
+radial_segments = 12
+rings = 4
+
+[node name="door1" type="Spatial"]
+script = ExtResource( 1 )
+
+[node name="hinge" type="HingeJoint" parent="."]
+transform = Transform( -1, -3.82137e-15, -8.74228e-08, -8.74228e-08, 4.37114e-08, 1, 0, 1, -4.37114e-08, -0.490171, 2.5, -0.0250435 )
+nodes/node_a = NodePath("../StaticBody")
+nodes/node_b = NodePath("../RigidBody")
+collision/exclude_nodes = false
+angular_limit/enable = true
+angular_limit/upper = 0.0
+angular_limit/lower = -180.0
+angular_limit/bias = 0.06
+
+[node name="lock" type="PinJoint" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.502475, 1.40885, 0 )
+nodes/node_a = NodePath("../StaticBody")
+nodes/node_b = NodePath("../RigidBody")
+params/bias = 0.01
+params/damping = 0.01
+params/impulse_clamp = 0.01
+
+[node name="StaticBody" type="StaticBody" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.59723, 0 )
+
+[node name="CollisionShape" type="CollisionShape" parent="StaticBody"]
+shape = SubResource( 3 )
+
+[node name="RigidBody" type="RigidBody" parent="."]
+mass = 20.0
+linear_damp = 4.838
+angular_damp = 3.087
+
+[node name="CollisionShape" type="CollisionShape" parent="RigidBody"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0256026, 1.25, 0 )
+shape = SubResource( 4 )
+
+[node name="mesh" type="MeshInstance" parent="RigidBody"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.25, 0 )
+mesh = SubResource( 1 )
+material/0 = null
+
+[node name="doorknob" type="MeshInstance" parent="RigidBody/mesh"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.376124, 0.128891, 0 )
+mesh = SubResource( 2 )
+material/0 = null

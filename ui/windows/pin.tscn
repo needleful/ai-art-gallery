@@ -1,0 +1,156 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://ui/dia_screens/dai_theme.tres" type="Theme" id=1]
+[ext_resource path="res://ui/windows/pin_panel.gd" type="Script" id=3]
+[ext_resource path="res://ui/windows/pin_number_button.gd" type="Script" id=4]
+
+[node name="pin_pad" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_right = -824.0
+margin_bottom = -285.0
+theme = ExtResource( 1 )
+script = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Panel" type="VBoxContainer" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Text" type="Label" parent="Panel"]
+margin_right = 200.0
+margin_bottom = 32.0
+text = "Enter PIN"
+align = 1
+clip_text = true
+
+[node name="GridContainer" type="GridContainer" parent="Panel"]
+margin_top = 36.0
+margin_right = 200.0
+margin_bottom = 315.0
+size_flags_vertical = 3
+columns = 3
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button" type="Button" parent="Panel/GridContainer"]
+margin_right = 64.0
+margin_bottom = 66.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "1"
+script = ExtResource( 4 )
+
+[node name="Button2" type="Button" parent="Panel/GridContainer"]
+margin_left = 68.0
+margin_right = 132.0
+margin_bottom = 66.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "2"
+script = ExtResource( 4 )
+
+[node name="Button3" type="Button" parent="Panel/GridContainer"]
+margin_left = 136.0
+margin_right = 200.0
+margin_bottom = 66.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "3"
+script = ExtResource( 4 )
+
+[node name="Button4" type="Button" parent="Panel/GridContainer"]
+margin_top = 70.0
+margin_right = 64.0
+margin_bottom = 136.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "4"
+script = ExtResource( 4 )
+
+[node name="Button5" type="Button" parent="Panel/GridContainer"]
+margin_left = 68.0
+margin_top = 70.0
+margin_right = 132.0
+margin_bottom = 136.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "5"
+script = ExtResource( 4 )
+
+[node name="Button6" type="Button" parent="Panel/GridContainer"]
+margin_left = 136.0
+margin_top = 70.0
+margin_right = 200.0
+margin_bottom = 136.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "6"
+script = ExtResource( 4 )
+
+[node name="Button7" type="Button" parent="Panel/GridContainer"]
+margin_top = 140.0
+margin_right = 64.0
+margin_bottom = 206.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "7"
+script = ExtResource( 4 )
+
+[node name="Button8" type="Button" parent="Panel/GridContainer"]
+margin_left = 68.0
+margin_top = 140.0
+margin_right = 132.0
+margin_bottom = 206.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "8"
+script = ExtResource( 4 )
+
+[node name="Button9" type="Button" parent="Panel/GridContainer"]
+margin_left = 136.0
+margin_top = 140.0
+margin_right = 200.0
+margin_bottom = 206.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "9"
+script = ExtResource( 4 )
+
+[node name="clear" type="Button" parent="Panel/GridContainer"]
+margin_top = 210.0
+margin_right = 64.0
+margin_bottom = 276.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "X"
+
+[node name="Button11" type="Button" parent="Panel/GridContainer"]
+margin_left = 68.0
+margin_top = 210.0
+margin_right = 132.0
+margin_bottom = 276.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "0"
+script = ExtResource( 4 )
+
+[node name="check" type="Button" parent="Panel/GridContainer"]
+margin_left = 136.0
+margin_top = 210.0
+margin_right = 200.0
+margin_bottom = 276.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "Go"
+
+[connection signal="pressed" from="Panel/GridContainer/clear" to="." method="cancel"]
+[connection signal="pressed" from="Panel/GridContainer/check" to="." method="check"]

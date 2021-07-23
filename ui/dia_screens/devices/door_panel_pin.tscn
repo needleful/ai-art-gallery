@@ -1,0 +1,29 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://ui/dia_screens/devices/door_panel.tscn" type="PackedScene" id=1]
+[ext_resource path="res://ui/windows/w_door_panel_pin.tscn" type="PackedScene" id=2]
+[ext_resource path="res://ui/dia_screens/screen.shader" type="Shader" id=3]
+[ext_resource path="res://ui/dia_screens/pixel.png" type="Texture" id=4]
+
+[sub_resource type="ViewportTexture" id=1]
+viewport_path = NodePath("Viewport")
+
+[sub_resource type="ShaderMaterial" id=2]
+resource_local_to_scene = true
+shader = ExtResource( 3 )
+shader_param/viewport_size = null
+shader_param/uv_scale = Vector2( 1, 1 )
+shader_param/viewport = SubResource( 1 )
+shader_param/pixel = ExtResource( 4 )
+
+[node name="door_panel_pin" instance=ExtResource( 1 )]
+control_node = NodePath("Viewport/w_door_panel_pin")
+
+[node name="quad" parent="." index="0"]
+material_override = SubResource( 2 )
+
+[node name="w_door_panel_pin" parent="Viewport" index="0" instance=ExtResource( 2 )]
+margin_right = 0.0
+margin_bottom = 1.52588e-05
+
+[connection signal="door_lock" from="Viewport/w_door_panel_pin" to="." method="emit_locked"]
