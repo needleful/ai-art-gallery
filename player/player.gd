@@ -6,6 +6,7 @@ export (float) var camera_fov_zoomed: float = 45.0
 export (bool) var toggle_zoom = true
 export (bool) var toggle_grab = true
 export (bool) var toggle_crouch = true
+export (float) var sensitivity = 1.0
 
 ## Body parts
 onready var torso: Spatial = $torso
@@ -113,7 +114,7 @@ func _ready() -> void:
 
 func _input(event:InputEvent) -> void:
 	if event is InputEventMouseMotion:
-		var sns = lerp(SNS_MOUSE, SNS_MOUSE_ZOOM, cam_zoom_amount)
+		var sns = sensitivity*lerp(SNS_MOUSE, SNS_MOUSE_ZOOM, cam_zoom_amount)
 		cam_mouse_movement += event.relative*sns
 	elif event.is_action("mv_crouch"):
 		if event.is_action_pressed("mv_crouch"):
@@ -276,12 +277,26 @@ func _physics_process(delta) -> void:
 		var i = itemCast.get_collider()
 		if i is RigidBody:
 			crosshair.visible = true
+			$ui/art_panel.visible = false
+			$ui/ref_crosshair.visible = false
 		else:
 			crosshair.visible = false
+			if i.has_method("get_art_info"):
+				var inf = i.get_art_info()
+				$ui/art_panel.visible = true
+				$ui/art_panel/vbox/Title.text = inf['title']
+				$ui/art_panel/vbox/Medium.text = inf['medium']
+				$ui/ref_crosshair.visible = false
+			else:
+				$ui/art_panel.visible = false
+				$ui/ref_crosshair.visible = true
 	else:
 		crosshair.visible = false
+		$ui/art_panel.visible = false
+		$ui/ref_crosshair.visible = true
 	
 	if (ui_intersect or !sighted) and uiCast.is_colliding():
+		$ui/ref_crosshair.visible = false
 		var col = uiCast.get_collider()
 		if col.has_method("process_mouse"):
 			ui_intersect = true

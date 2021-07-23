@@ -11,6 +11,7 @@ func _ready():
 	pause(get_tree().paused)
 
 func pause(pause):
+	$FastOptionsMenu.hide()
 	if pause:
 		previous_mouse_hold = Input.get_mouse_mode()
 		Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)

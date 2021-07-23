@@ -52,6 +52,10 @@ func _ready():
 			if res != OK:
 				print_debug("Could not connect ui_redraw signal!  Error: ", res)
 	load_settings(save_path)
+	var f = File.new()
+	if !f.file_exists(default_path):
+		print("generating default settings...")
+		save_settings(default_path)
 	build_menu()
 
 func build_menu():
@@ -106,7 +110,7 @@ func link_widget(options, property, widget: Control):
 	widget.set_option_value(options.get(property.name))
 	widget.connect("changed", options, "set")
 
-func save_settings():
+func save_settings(path = save_path):
 	var file:ConfigFile = ConfigFile.new()
 	for opt_name in suboptions.keys():
 		var options:Object = suboptions[opt_name]
@@ -114,7 +118,7 @@ func save_settings():
 			if property.usage & USAGE_FLAGS == USAGE_FLAGS:
 				file.set_value(opt_name, 
 					property.name, options.get(property.name))
-	var res = file.save(save_path)
+	var res = file.save(path)
 	if res != OK:
 		print_debug("Failed to save config file with error: ",res)
 

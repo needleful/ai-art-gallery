@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/even more baroque pixel art.png-104a6383285b48aa090a04a1d195e3ed.stex"
+path="res://.import/crosshair-ref.png-148006305e80f9f6accd06d7959b31d8.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://art/imagenet_16384/even more baroque pixel art.png"
-dest_files=[ "res://.import/even more baroque pixel art.png-104a6383285b48aa090a04a1d195e3ed.stex" ]
+source_file="res://ui/icons/crosshair-ref.png"
+dest_files=[ "res://.import/crosshair-ref.png-148006305e80f9f6accd06d7959b31d8.stex" ]
 
 [params]
 
@@ -21,7 +21,7 @@ compress/bptc_ldr=0
 compress/normal_map=0
 flags/repeat=0
 flags/filter=false
-flags/mipmaps=true
+flags/mipmaps=false
 flags/anisotropic=false
 flags/srgb=2
 process/fix_alpha_border=true

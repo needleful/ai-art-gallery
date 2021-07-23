@@ -60,6 +60,10 @@ config/name="needleful's AI Art Gallery"
 run/main_scene="res://main_scene.tscn"
 config/icon="res://icon.png"
 
+[display]
+
+window/dpi/allow_hidpi=true
+
 [editor_plugins]
 
 enabled=PoolStringArray( "fast_options" )
