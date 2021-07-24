@@ -1,10 +1,10 @@
 tool
 extends Spatial
 
+export (Vector2) var art_scale := Vector2(1,1)
 export (Texture) var art: Texture setget set_art
 export (String) var title := ""
 export (String) var medium := ""
-export (Vector2) var art_scale := Vector2(1,1)
 
 func set_art(a):
 	if has_node("MeshInstance"):

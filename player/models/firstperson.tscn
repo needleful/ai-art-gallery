@@ -1,4 +1,4 @@
-[gd_scene load_steps=44 format=2]
+[gd_scene load_steps=27 format=2]
 
 [ext_resource path="res://player/models/firstperson.glb" type="PackedScene" id=1]
 [ext_resource path="res://player/model.gd" type="Script" id=2]
@@ -9,245 +9,146 @@
 [sub_resource type="SphereShape" id=1]
 radius = 0.06
 
-[sub_resource type="BoxShape" id=2]
-extents = Vector3( 0.0490838, 0.0870272, 0.0232213 )
-
-[sub_resource type="SphereShape" id=3]
+[sub_resource type="SphereShape" id=2]
 radius = 0.06
 
-[sub_resource type="CapsuleShape" id=4]
-radius = 0.114884
-height = 0.194394
-
-[sub_resource type="CapsuleShape" id=5]
-radius = 0.111636
-height = 0.0962358
-
-[sub_resource type="CapsuleShape" id=6]
-radius = 0.0576065
-height = 0.126241
-
-[sub_resource type="CapsuleShape" id=7]
-radius = 0.0627107
-height = 0.25546
-
-[sub_resource type="CapsuleShape" id=8]
-radius = 0.0541327
-height = 0.233376
-
-[sub_resource type="BoxShape" id=9]
-extents = Vector3( 0.0174503, 0.0562541, 0.0371088 )
-
-[sub_resource type="CapsuleShape" id=10]
-radius = 0.0610695
-height = 0.126241
-
-[sub_resource type="CapsuleShape" id=11]
-radius = 0.06
-height = 0.263438
-
-[sub_resource type="CapsuleShape" id=12]
-radius = 0.0461351
-height = 0.299015
-
-[sub_resource type="BoxShape" id=13]
-extents = Vector3( 0.017, 0.056, 0.037 )
-
-[sub_resource type="CapsuleShape" id=14]
-radius = 0.192474
-height = 0.002
-
-[sub_resource type="GDScript" id=15]
-script/source = "extends KinematicBody
-class_name DamageBone
-
-onready var host: Spatial = $\"../../../..\"
-
-# Declare member variables here. Examples:
-# var a = 2
-# var b = \"text\"
-
-
-# Called when the node enters the scene tree for the first time.
-func _ready():
-	pass # Replace with function body.
-
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-#func _process(delta):
-#	pass
-"
-
-[sub_resource type="CapsuleShape" id=16]
-radius = 0.0750206
-height = 0.321686
-
-[sub_resource type="CapsuleShape" id=17]
-radius = 0.0656493
-height = 0.45
-
-[sub_resource type="CapsuleShape" id=18]
-radius = 0.074963
-height = 0.321686
-
-[sub_resource type="CapsuleShape" id=19]
-radius = 0.07
-height = 0.45
-
-[sub_resource type="AnimationNodeAnimation" id=20]
+[sub_resource type="AnimationNodeAnimation" id=3]
 animation = "Crouch_Idle-loop"
 
-[sub_resource type="AnimationNodeAnimation" id=21]
+[sub_resource type="AnimationNodeAnimation" id=4]
 animation = "Crouch_WalkForward-loop"
 
-[sub_resource type="AnimationNodeAnimation" id=22]
+[sub_resource type="AnimationNodeAnimation" id=5]
 animation = "Crouch_WalkRigh-loop"
 
-[sub_resource type="AnimationNodeAnimation" id=23]
+[sub_resource type="AnimationNodeAnimation" id=6]
 animation = "Crouch_WalkBackward-loop"
 
-[sub_resource type="AnimationNodeAnimation" id=24]
+[sub_resource type="AnimationNodeAnimation" id=7]
 animation = "Crouch_WalkLeft-loop"
 
-[sub_resource type="AnimationNodeBlendSpace2D" id=25]
-blend_point_0/node = SubResource( 20 )
+[sub_resource type="AnimationNodeBlendSpace2D" id=8]
+blend_point_0/node = SubResource( 3 )
 blend_point_0/pos = Vector2( 0, 0 )
-blend_point_1/node = SubResource( 21 )
+blend_point_1/node = SubResource( 4 )
 blend_point_1/pos = Vector2( 0, 1 )
-blend_point_2/node = SubResource( 22 )
+blend_point_2/node = SubResource( 5 )
 blend_point_2/pos = Vector2( -1, 0 )
-blend_point_3/node = SubResource( 23 )
+blend_point_3/node = SubResource( 6 )
 blend_point_3/pos = Vector2( 0, -1 )
-blend_point_4/node = SubResource( 24 )
+blend_point_4/node = SubResource( 7 )
 blend_point_4/pos = Vector2( 1, 0 )
 
-[sub_resource type="AnimationNodeBlend2" id=26]
+[sub_resource type="AnimationNodeBlend2" id=9]
 filters = [ "Armature/Skeleton:c_foot_heel._l", "Armature/Skeleton:c_foot_heel._r", "Armature/Skeleton:c_foot_toe._l", "Armature/Skeleton:c_foot_toe._r", "Armature/Skeleton:c_helper_1", "Armature/Skeleton:c_helper_2", "Armature/Skeleton:c_sights", "Armature/Skeleton:c_weapon", "Armature/Skeleton:d_bicep._l", "Armature/Skeleton:d_bicep._r", "Armature/Skeleton:d_bicep_rotate._l", "Armature/Skeleton:d_bicep_rotate._r", "Armature/Skeleton:d_calf._l", "Armature/Skeleton:d_calf._r", "Armature/Skeleton:d_forearm._l", "Armature/Skeleton:d_forearm._r", "Armature/Skeleton:d_hand._l", "Armature/Skeleton:d_hand._r", "Armature/Skeleton:d_heel._l", "Armature/Skeleton:d_heel._r", "Armature/Skeleton:d_hips", "Armature/Skeleton:d_index._1._l", "Armature/Skeleton:d_index._1._r", "Armature/Skeleton:d_index._2._l", "Armature/Skeleton:d_index._2._r", "Armature/Skeleton:d_index._3._l", "Armature/Skeleton:d_index._3._r", "Armature/Skeleton:d_lumbar", "Armature/Skeleton:d_lumbar_2", "Armature/Skeleton:d_middle._1._l", "Armature/Skeleton:d_middle._1._r", "Armature/Skeleton:d_middle._2._l", "Armature/Skeleton:d_middle._2._r", "Armature/Skeleton:d_middle._3._l", "Armature/Skeleton:d_middle._3._r", "Armature/Skeleton:d_pinky._1._l", "Armature/Skeleton:d_pinky._1._r", "Armature/Skeleton:d_pinky._2._l", "Armature/Skeleton:d_pinky._2._r", "Armature/Skeleton:d_pinky._3._l", "Armature/Skeleton:d_pinky._3._r", "Armature/Skeleton:d_ring._1._l", "Armature/Skeleton:d_ring._1._r", "Armature/Skeleton:d_ring._2._l", "Armature/Skeleton:d_ring._2._r", "Armature/Skeleton:d_ring._3._l", "Armature/Skeleton:d_ring._3._r", "Armature/Skeleton:d_shoulder._l", "Armature/Skeleton:d_shoulder._r", "Armature/Skeleton:d_thigh._l", "Armature/Skeleton:d_thigh._r", "Armature/Skeleton:d_thumb_lower._1._l", "Armature/Skeleton:d_thumb_lower._1._r", "Armature/Skeleton:d_thumb_lower._2._l", "Armature/Skeleton:d_thumb_lower._2._r", "Armature/Skeleton:d_thumb_lower._3._l", "Armature/Skeleton:d_thumb_lower._3._r", "Armature/Skeleton:d_thumb_upper._1._l", "Armature/Skeleton:d_thumb_upper._1._r", "Armature/Skeleton:d_thumb_upper._2._l", "Armature/Skeleton:d_thumb_upper._2._r", "Armature/Skeleton:d_thumb_upper_3._l", "Armature/Skeleton:d_thumb_upper_3._r", "Armature/Skeleton:d_toe._l", "Armature/Skeleton:d_toe._r", "Armature/Skeleton:d_torso", "Armature/Skeleton:d_upper_back", "Armature/Skeleton:ik_forearm._l", "Armature/Skeleton:ik_forearm._r", "Armature/Skeleton:ik_leg_pole._l", "Armature/Skeleton:ik_leg_pole._r", "Armature/Skeleton:ik_leg_target._l", "Armature/Skeleton:ik_leg_target._r", "Armature/Skeleton:ik_pole._l", "Armature/Skeleton:ik_pole._r", "Armature/Skeleton:ik_target._l", "Armature/Skeleton:ik_target._r", "Armature/Skeleton:ik_toe._l", "Armature/Skeleton:ik_toe._r", "Armature/Skeleton:ik_toe_pole._l", "Armature/Skeleton:ik_toe_pole._r" ]
 sync = true
 
-[sub_resource type="AnimationNodeBlend2" id=27]
+[sub_resource type="AnimationNodeBlend2" id=10]
 filter_enabled = true
 filters = [ "Armature/Skeleton:d_lumbar", "Armature/Skeleton:d_lumbar_2", "Armature/Skeleton:d_torso" ]
 
-[sub_resource type="AnimationNodeAnimation" id=28]
+[sub_resource type="AnimationNodeAnimation" id=11]
 animation = "Lookdown"
 
-[sub_resource type="AnimationNodeAnimation" id=29]
+[sub_resource type="AnimationNodeAnimation" id=12]
 animation = "LookUp"
 
-[sub_resource type="AnimationNodeAnimation" id=30]
+[sub_resource type="AnimationNodeAnimation" id=13]
 animation = "Origin"
 
-[sub_resource type="AnimationNodeBlendSpace1D" id=31]
-blend_point_0/node = SubResource( 28 )
+[sub_resource type="AnimationNodeBlendSpace1D" id=14]
+blend_point_0/node = SubResource( 11 )
 blend_point_0/pos = -1.0
-blend_point_1/node = SubResource( 29 )
+blend_point_1/node = SubResource( 12 )
 blend_point_1/pos = 1.0
-blend_point_2/node = SubResource( 30 )
+blend_point_2/node = SubResource( 13 )
 blend_point_2/pos = 0.0
 
-[sub_resource type="AnimationNodeAnimation" id=32]
+[sub_resource type="AnimationNodeAnimation" id=15]
 animation = "Idle-loop"
 
-[sub_resource type="AnimationNodeAnimation" id=33]
+[sub_resource type="AnimationNodeAnimation" id=16]
 animation = "WalkForward-loop"
 
-[sub_resource type="AnimationNodeAnimation" id=34]
+[sub_resource type="AnimationNodeAnimation" id=17]
 animation = "WalkRight-loop"
 
-[sub_resource type="AnimationNodeAnimation" id=35]
+[sub_resource type="AnimationNodeAnimation" id=18]
 animation = "WalkLeft-loop"
 
-[sub_resource type="AnimationNodeAnimation" id=36]
+[sub_resource type="AnimationNodeAnimation" id=19]
 animation = "WalkBackward-loop"
 
-[sub_resource type="AnimationNodeBlendSpace2D" id=37]
-blend_point_0/node = SubResource( 32 )
+[sub_resource type="AnimationNodeBlendSpace2D" id=20]
+blend_point_0/node = SubResource( 15 )
 blend_point_0/pos = Vector2( 0, 0 )
-blend_point_1/node = SubResource( 33 )
+blend_point_1/node = SubResource( 16 )
 blend_point_1/pos = Vector2( 0, 1 )
-blend_point_2/node = SubResource( 34 )
+blend_point_2/node = SubResource( 17 )
 blend_point_2/pos = Vector2( -1, 0 )
-blend_point_3/node = SubResource( 35 )
+blend_point_3/node = SubResource( 18 )
 blend_point_3/pos = Vector2( 1, 0 )
-blend_point_4/node = SubResource( 36 )
+blend_point_4/node = SubResource( 19 )
 blend_point_4/pos = Vector2( 0, -1 )
 
-[sub_resource type="AnimationNodeBlendTree" id=38]
+[sub_resource type="AnimationNodeBlendTree" id=21]
 graph_offset = Vector2( -724, -166 )
-nodes/crouch/node = SubResource( 25 )
+nodes/crouch/node = SubResource( 8 )
 nodes/crouch/position = Vector2( -420, 20 )
-nodes/lower/node = SubResource( 26 )
+nodes/lower/node = SubResource( 9 )
 nodes/lower/position = Vector2( -140, -140 )
-nodes/move_and_look/node = SubResource( 27 )
+nodes/move_and_look/node = SubResource( 10 )
 nodes/move_and_look/position = Vector2( 160, -140 )
 nodes/output/position = Vector2( 400, -120 )
-nodes/torso/node = SubResource( 31 )
+nodes/torso/node = SubResource( 14 )
 nodes/torso/position = Vector2( -120, 100 )
-nodes/walk/node = SubResource( 37 )
+nodes/walk/node = SubResource( 20 )
 nodes/walk/position = Vector2( -420, -140 )
-node_connections = [ "output", 0, "move_and_look", "lower", 0, "walk", "lower", 1, "crouch", "move_and_look", 0, "lower", "move_and_look", 1, "torso" ]
+node_connections = [ "lower", 0, "walk", "lower", 1, "crouch", "move_and_look", 0, "lower", "move_and_look", 1, "torso", "output", 0, "move_and_look" ]
 
 [node name="firstperson" instance=ExtResource( 1 )]
 script = ExtResource( 2 )
 
 [node name="Skeleton" parent="Armature" index="0"]
-bones/4/bound_children = [ NodePath("phys_lumbar") ]
-bones/6/bound_children = [ NodePath("phys_upper_back") ]
 bones/55/bound_children = [ NodePath("weapon") ]
 bones/56/bound_children = [ NodePath("helper1") ]
 bones/57/bound_children = [ NodePath("helper2") ]
 bones/58/bound_children = [ NodePath("sights_attach") ]
-bones/59/bound_children = [ NodePath("phys_hips_l") ]
+bones/63/bound_children = [ NodePath("attach_footRight") ]
+bones/67/bound_children = [ NodePath("attach_footLeft") ]
 
 [node name="attach_footRight" type="BoneAttachment" parent="Armature/Skeleton" index="1"]
-transform = Transform( -0.999999, 0.000612147, -0.00115889, -0.00125248, -0.186154, 0.98252, 0.00038626, 0.982521, 0.186156, -0.154981, -1.44728, 0.0316121 )
-bone_name = "d_toe._r"
+transform = Transform( -0.999999, -2.82136e-07, 2.54039e-06, 2.55653e-06, -0.114275, 0.99345, 6.04837e-09, 0.993449, 0.114276, -0.116013, -1.45625, 0.0343961 )
+bone_name = "d_toe_r"
 script = ExtResource( 3 )
 audio_sources = [ ExtResource( 4 ) ]
 
 [node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="Armature/Skeleton/attach_footRight" index="0"]
 stream = ExtResource( 5 )
+unit_db = -1.0
 
 [node name="Area" type="Area" parent="Armature/Skeleton/attach_footRight" index="1"]
+transform = Transform( 1, -1.06581e-13, 2.88658e-14, -1.82077e-14, 1, 0, -3.82472e-14, 0, 1, -7.45058e-08, 0.00402483, -0.0349897 )
 collision_layer = 0
 
 [node name="CollisionShape" type="CollisionShape" parent="Armature/Skeleton/attach_footRight/Area" index="0"]
 shape = SubResource( 1 )
 
-[node name="KinematicBody" type="KinematicBody" parent="Armature/Skeleton/attach_footRight" index="2" groups=[
-"player_limbs",
-]]
-collision_layer = 2
-collision_mask = 2
-
-[node name="CollisionShape" type="CollisionShape" parent="Armature/Skeleton/attach_footRight/KinematicBody" index="0"]
-transform = Transform( 1, 1.49012e-08, -7.45058e-09, -5.21541e-08, 0.993915, -0.110151, -5.58794e-09, 0.11015, 0.993914, 7.45058e-09, 0.0116546, -0.0205175 )
-shape = SubResource( 2 )
-
 [node name="attach_footLeft" type="BoneAttachment" parent="Armature/Skeleton" index="2"]
-transform = Transform( -0.995884, 0.0371586, -0.0826688, -0.0880998, -0.182605, 0.979232, 0.0212911, 0.982484, 0.185127, 0.178033, -1.45313, 0.035196 )
-bone_name = "d_toe._l"
+transform = Transform( -1, 1.30226e-07, -2.6226e-06, -2.62091e-06, -0.114274, 0.993449, -1.7124e-07, 0.993449, 0.114274, 0.116014, -1.45625, 0.0343961 )
+bone_name = "d_toe_l"
 script = ExtResource( 3 )
 audio_sources = [ ExtResource( 4 ) ]
 
 [node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="Armature/Skeleton/attach_footLeft" index="0"]
 stream = ExtResource( 5 )
+unit_db = -1.0
 
 [node name="Area" type="Area" parent="Armature/Skeleton/attach_footLeft" index="1"]
+transform = Transform( 1, 1.86259e-09, -7.91631e-09, 4.26326e-14, 1, -4.47035e-08, -2.32922e-09, 0, 1, 1.04308e-07, 0.00402476, -0.0349898 )
 collision_layer = 0
 
 [node name="CollisionShape" type="CollisionShape" parent="Armature/Skeleton/attach_footLeft/Area" index="0"]
-shape = SubResource( 3 )
-
-[node name="KinematicBody" type="KinematicBody" parent="Armature/Skeleton/attach_footLeft" index="2" groups=[
-"player_limbs",
-]]
-collision_layer = 2
-collision_mask = 2
-
-[node name="CollisionShape" type="CollisionShape" parent="Armature/Skeleton/attach_footLeft/KinematicBody" index="0"]
-transform = Transform( 0.999999, 2.23517e-08, -3.72529e-09, -7.45058e-09, 0.991978, -0.126407, 3.72529e-09, 0.126407, 0.991978, -7.45058e-09, 0.0026992, -0.018314 )
 shape = SubResource( 2 )
 
 [node name="sights_attach" type="BoneAttachment" parent="Armature/Skeleton" index="3"]
@@ -266,219 +167,8 @@ bone_name = "c_helper_2"
 transform = Transform( 1.1, -2.6077e-08, 2.5332e-07, -1.95578e-07, 1.09861, 0.0552688, -2.68221e-07, -0.0552687, 1.09861, 1.69444e-07, 0.00459467, 0.715837 )
 bone_name = "c_weapon"
 
-[node name="phys_lumbar" type="BoneAttachment" parent="Armature/Skeleton" index="7"]
-transform = Transform( -0.0311226, -5.21541e-08, 0.999516, -0.138828, 0.990307, -0.00432277, -0.989828, -0.138895, -0.0308208, 1.68088e-08, -0.350247, -0.0391352 )
-bone_name = "d_lumbar"
-
-[node name="KinematicBody" type="KinematicBody" parent="Armature/Skeleton/phys_lumbar" index="0" groups=[
-"player_limbs",
-]]
-collision_layer = 2
-collision_mask = 2
-
-[node name="CollisionShape" type="CollisionShape" parent="Armature/Skeleton/phys_lumbar/KinematicBody" index="0"]
-transform = Transform( 0.999999, 0, 0, 0, -1.62921e-07, -1, 0, 1, -1.62921e-07, -0.045, 0, 0 )
-shape = SubResource( 4 )
-
-[node name="phys_upper_back" type="BoneAttachment" parent="Armature/Skeleton" index="8"]
-transform = Transform( 0.990528, 4.93601e-08, 0.137313, 0.0271155, 0.980308, -0.195602, -0.134609, 0.197472, 0.971023, -1.91919e-09, -0.0845723, -0.0915757 )
-bone_name = "d_upper_back"
-
-[node name="KinematicBody" type="KinematicBody" parent="Armature/Skeleton/phys_upper_back" index="0" groups=[
-"player_limbs",
-]]
-collision_layer = 2
-collision_mask = 2
-
-[node name="CollisionShape" type="CollisionShape" parent="Armature/Skeleton/phys_upper_back/KinematicBody" index="0"]
-transform = Transform( -0.00496398, -0.11055, 0.993858, 0.929036, 0.367185, 0.0454834, -0.369958, 0.923556, 0.100882, -0.00386093, 0.0289721, 0.0799041 )
-shape = SubResource( 5 )
-
-[node name="phys_shoulder_r" type="BoneAttachment" parent="Armature/Skeleton" index="9"]
-transform = Transform( -0.0766176, -0.912612, 0.401585, -0.212061, 0.408469, 0.887797, -0.974248, -0.0171399, -0.224825, 0.0238888, -0.375605, -0.112226 )
-bone_name = "d_shoulder._r"
-
-[node name="KinematicBody" type="KinematicBody" parent="Armature/Skeleton/phys_shoulder_r" index="0" groups=[
-"player_limbs",
-]]
-collision_layer = 2
-collision_mask = 2
-
-[node name="CollisionShape" type="CollisionShape" parent="Armature/Skeleton/phys_shoulder_r/KinematicBody" index="0"]
-transform = Transform( 1, -4.90248e-06, 0.000664786, 0.000664766, -0.00364968, -0.999993, 7.37607e-06, 0.999995, -0.00364967, -0.000888009, 0.0713125, 0.00486885 )
-shape = SubResource( 6 )
-
-[node name="phys_bicep_r" type="BoneAttachment" parent="Armature/Skeleton" index="10"]
-transform = Transform( 0.953482, -0.293412, -0.069151, -0.287088, -0.953802, 0.0885535, -0.0919391, -0.0645818, -0.993668, -0.120122, -0.311149, -0.11493 )
-bone_name = "d_bicep._r"
-
-[node name="KinematicBody" type="KinematicBody" parent="Armature/Skeleton/phys_bicep_r" index="0" groups=[
-"player_limbs",
-]]
-collision_layer = 2
-collision_mask = 2
-
-[node name="CollisionShape" type="CollisionShape" parent="Armature/Skeleton/phys_bicep_r/KinematicBody" index="0"]
-transform = Transform( 0.999998, 2.98023e-08, 1.58325e-08, 4.47035e-08, -1.49012e-07, -0.999999, 2.98023e-08, 0.999998, -1.71363e-07, 0, 0.204, 0 )
-shape = SubResource( 7 )
-
-[node name="phys_forearm_r" type="BoneAttachment" parent="Armature/Skeleton" index="11"]
-transform = Transform( 0.923942, 0.0304157, -0.38132, -0.292177, -0.587297, -0.754794, -0.246906, 0.8088, -0.533742, -0.222363, -0.677205, -0.0665039 )
-bone_name = "d_forearm._r"
-
-[node name="KinematicBody" type="KinematicBody" parent="Armature/Skeleton/phys_forearm_r" index="0" groups=[
-"player_limbs",
-]]
-collision_layer = 2
-collision_mask = 2
-
-[node name="CollisionShape" type="CollisionShape" parent="Armature/Skeleton/phys_forearm_r/KinematicBody" index="0"]
-transform = Transform( 1, -8.9407e-08, -2.98023e-07, -8.9407e-08, -1.78814e-07, -1, 2.98023e-08, 1, -2.83122e-07, -5.96046e-08, 0.0932207, 1.57394e-07 )
-shape = SubResource( 8 )
-
-[node name="phys_hand_r" type="BoneAttachment" parent="Armature/Skeleton" index="12"]
-transform = Transform( -0.381589, -0.128322, 0.915381, 0.852068, -0.432697, 0.294539, 0.358287, 0.89236, 0.274451, -0.214519, -0.828679, 0.1421 )
-bone_name = "d_hand._r"
-
-[node name="KinematicBody" type="KinematicBody" parent="Armature/Skeleton/phys_hand_r" index="0" groups=[
-"player_limbs",
-]]
-collision_layer = 2
-collision_mask = 2
-
-[node name="CollisionShape" type="CollisionShape" parent="Armature/Skeleton/phys_hand_r/KinematicBody" index="0"]
-transform = Transform( 0.994079, -0.108659, -1.78814e-07, 0.108469, 0.99234, -0.0591322, 0.00642541, 0.058782, 0.998251, -0.015171, 0.04717, 0.00396623 )
-shape = SubResource( 9 )
-
-[node name="phys_shoulder_l" type="BoneAttachment" parent="Armature/Skeleton" index="13"]
-transform = Transform( -0.0603264, 0.940935, -0.33317, 0.217256, 0.338153, 0.915671, 0.974249, -0.017144, -0.224824, 0.0238888, -0.375605, -0.112226 )
-bone_name = "d_shoulder._l"
-
-[node name="KinematicBody" type="KinematicBody" parent="Armature/Skeleton/phys_shoulder_l" index="0" groups=[
-"player_limbs",
-]]
-collision_layer = 2
-collision_mask = 2
-
-[node name="CollisionShape" type="CollisionShape" parent="Armature/Skeleton/phys_shoulder_l/KinematicBody" index="0"]
-transform = Transform( 0.999999, 1.49012e-08, -7.45058e-09, 6.51926e-09, -1.31258e-07, -1, 1.49012e-08, 0.999999, -8.59436e-08, -3.72529e-09, 0.0665752, 2.98023e-08 )
-shape = SubResource( 10 )
-
-[node name="phys_bicep_l" type="BoneAttachment" parent="Armature/Skeleton" index="14"]
-transform = Transform( 0.984422, 0.170828, -0.0415964, 0.170285, -0.985261, -0.0162937, -0.0437667, 0.00895654, -0.999002, 0.172369, -0.322244, -0.114931 )
-bone_name = "d_bicep._l"
-
-[node name="KinematicBody" type="KinematicBody" parent="Armature/Skeleton/phys_bicep_l" index="0" groups=[
-"player_limbs",
-]]
-collision_layer = 2
-collision_mask = 2
-
-[node name="CollisionShape" type="CollisionShape" parent="Armature/Skeleton/phys_bicep_l/KinematicBody" index="0"]
-transform = Transform( 1, 2.98023e-08, 4.00469e-08, 2.98023e-08, -1.78814e-07, -1, 2.98023e-08, 1, -1.75089e-07, 0, 0.204, 0 )
-shape = SubResource( 11 )
-
-[node name="phys_forearm_l" type="BoneAttachment" parent="Armature/Skeleton" index="15"]
-transform = Transform( 0.987627, 0.0159049, -0.156013, -0.118983, -0.572068, -0.81153, -0.102157, 0.820052, -0.563097, 0.237832, -0.698345, -0.0404518 )
-bone_name = "d_forearm._l"
-
-[node name="KinematicBody" type="KinematicBody" parent="Armature/Skeleton/phys_forearm_l" index="0" groups=[
-"player_limbs",
-]]
-collision_layer = 2
-collision_mask = 2
-
-[node name="CollisionShape" type="CollisionShape" parent="Armature/Skeleton/phys_forearm_l/KinematicBody" index="0"]
-transform = Transform( 1, -5.96046e-08, -8.9407e-08, 2.98023e-08, -8.9407e-08, -1, 5.96046e-08, 1, -2.5332e-07, 0, 0.118726, -2.6077e-08 )
-shape = SubResource( 12 )
-
-[node name="phys_hand_l" type="BoneAttachment" parent="Armature/Skeleton" index="16"]
-transform = Transform( -0.785384, 0.241017, -0.570161, -0.604072, -0.499536, 0.620935, -0.13516, 0.832091, 0.537919, 0.241934, -0.845892, 0.171054 )
-bone_name = "d_hand._l"
-
-[node name="KinematicBody" type="KinematicBody" parent="Armature/Skeleton/phys_hand_l" index="0" groups=[
-"player_limbs",
-]]
-collision_layer = 2
-collision_mask = 2
-
-[node name="CollisionShape" type="CollisionShape" parent="Armature/Skeleton/phys_hand_l/KinematicBody" index="0"]
-transform = Transform( 0.990139, 0.140089, 8.9407e-08, -0.139144, 0.983457, -0.115977, -0.0162472, 0.114834, 0.993253, 0.0125971, 0.0627557, 0.00550238 )
-shape = SubResource( 13 )
-
-[node name="phys_hips_l" type="BoneAttachment" parent="Armature/Skeleton" index="17"]
-transform = Transform( -1, -1.0857e-08, 3.01971e-06, 2.9994e-06, 0.112259, 0.993679, -3.49777e-07, 0.993679, -0.112259, -1.1402e-13, -0.513029, -0.0877974 )
-bone_name = "d_hips"
-
-[node name="KinematicBody" type="KinematicBody" parent="Armature/Skeleton/phys_hips_l" index="0" groups=[
-"player_limbs",
-]]
-collision_layer = 2
-collision_mask = 2
-
-[node name="CollisionShape" type="CollisionShape" parent="Armature/Skeleton/phys_hips_l/KinematicBody" index="0"]
-transform = Transform( 1, 3.72529e-09, -8.49832e-09, -6.51926e-09, 1, 7.45058e-09, 3.69619e-08, -1.49012e-08, 1, 0, 0.0720778, 0 )
-shape = SubResource( 14 )
-
-[node name="phys_thigh_r" type="BoneAttachment" parent="Armature/Skeleton" index="18"]
-transform = Transform( 0.947903, -0.265937, -0.175381, -0.286876, -0.473246, -0.832911, 0.138503, 0.839831, -0.524882, -0.0868228, -0.933436, -0.0208116 )
-bone_name = "d_thigh._r"
-
-[node name="KinematicBody" type="KinematicBody" parent="Armature/Skeleton/phys_thigh_r" index="0" groups=[
-"player_limbs",
-]]
-collision_layer = 2
-collision_mask = 2
-script = SubResource( 15 )
-
-[node name="CollisionShape" type="CollisionShape" parent="Armature/Skeleton/phys_thigh_r/KinematicBody" index="0"]
-transform = Transform( 1, 1.49012e-08, -4.84288e-08, -4.47035e-08, 2.98023e-08, -1, 1.49012e-08, 1, -2.98023e-08, 2.98023e-08, 0.225556, 5.96046e-08 )
-shape = SubResource( 16 )
-
-[node name="phys_calf_r" type="BoneAttachment" parent="Armature/Skeleton" index="19"]
-transform = Transform( 0.990511, 0.0824671, 0.109944, -0.0427575, -0.575362, 0.81678, 0.130615, -0.813731, -0.566376, -0.193758, -1.12373, 0.316891 )
-bone_name = "d_calf._r"
-
-[node name="KinematicBody" type="KinematicBody" parent="Armature/Skeleton/phys_calf_r" index="0" groups=[
-"player_limbs",
-]]
-collision_layer = 2
-collision_mask = 2
-
-[node name="CollisionShape" type="CollisionShape" parent="Armature/Skeleton/phys_calf_r/KinematicBody" index="0"]
-transform = Transform( 1, 2.79397e-09, 8.49832e-09, -7.10133e-09, -8.9407e-08, -1, 2.79397e-09, 1, -1.19209e-07, 0, 0.278841, 0 )
-shape = SubResource( 17 )
-
-[node name="phys_thigh_l" type="BoneAttachment" parent="Armature/Skeleton" index="20"]
-transform = Transform( 0.958623, 0.217743, 0.183387, 0.263631, -0.435908, -0.860513, -0.107431, 0.873254, -0.475275, 0.11096, -0.940939, -0.0398586 )
-bone_name = "d_thigh._l"
-
-[node name="KinematicBody" type="KinematicBody" parent="Armature/Skeleton/phys_thigh_l" index="0" groups=[
-"player_limbs",
-]]
-collision_layer = 2
-collision_mask = 2
-
-[node name="CollisionShape" type="CollisionShape" parent="Armature/Skeleton/phys_thigh_l/KinematicBody" index="0"]
-transform = Transform( 1, -3.72529e-09, 2.23517e-08, 2.42144e-08, -5.96046e-08, -1, -1.49012e-08, 1, -2.98023e-08, 0, 0.205, 0 )
-shape = SubResource( 18 )
-
-[node name="phys_calf_l" type="BoneAttachment" parent="Armature/Skeleton" index="21"]
-transform = Transform( 0.996034, -0.0581181, -0.0673729, 0.0185556, -0.604872, 0.796107, -0.0870202, -0.7942, -0.601394, 0.198516, -1.11622, 0.311284 )
-bone_name = "d_calf._l"
-
-[node name="KinematicBody" type="KinematicBody" parent="Armature/Skeleton/phys_calf_l" index="0" groups=[
-"player_limbs",
-]]
-collision_layer = 2
-collision_mask = 2
-
-[node name="CollisionShape" type="CollisionShape" parent="Armature/Skeleton/phys_calf_l/KinematicBody" index="0"]
-transform = Transform( 1, 1.49012e-08, 4.29573e-08, 3.94648e-08, -2.64496e-07, -1, 1.49012e-08, 1, 8.19564e-08, 0, 0.266021, 2.38419e-07 )
-shape = SubResource( 19 )
-
 [node name="AnimationTree" type="AnimationTree" parent="." index="2"]
-tree_root = SubResource( 38 )
+tree_root = SubResource( 21 )
 anim_player = NodePath("../AnimationPlayer")
 active = true
 parameters/crouch/blend_position = Vector2( 0, 0 )

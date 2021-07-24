@@ -2,8 +2,8 @@
 
 importer="texture"
 type="StreamTexture"
-path.s3tc="res://.import/tracer overwatch.png-a0657a1276cdd15e4404540dba3dfdd0.s3tc.stex"
-path.etc2="res://.import/tracer overwatch.png-a0657a1276cdd15e4404540dba3dfdd0.etc2.stex"
+path.s3tc="res://.import/jumpscare.png-ee7664dd4614176e94bc8a8a178647dd.s3tc.stex"
+path.etc2="res://.import/jumpscare.png-ee7664dd4614176e94bc8a8a178647dd.etc2.stex"
 metadata={
 "imported_formats": [ "s3tc", "etc2" ],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://art/imagenet_16384/tracer overwatch.png"
-dest_files=[ "res://.import/tracer overwatch.png-a0657a1276cdd15e4404540dba3dfdd0.s3tc.stex", "res://.import/tracer overwatch.png-a0657a1276cdd15e4404540dba3dfdd0.etc2.stex" ]
+source_file="res://art/wikiart_16384/jumpscare.png"
+dest_files=[ "res://.import/jumpscare.png-ee7664dd4614176e94bc8a8a178647dd.s3tc.stex", "res://.import/jumpscare.png-ee7664dd4614176e94bc8a8a178647dd.etc2.stex" ]
 
 [params]
 

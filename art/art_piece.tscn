@@ -17,6 +17,7 @@ extents = Vector3( 0.24, 1, 0.1 )
 [node name="art" type="StaticBody"]
 collision_layer = 17
 script = ExtResource( 1 )
+medium = "imagenet_16384"
 
 [node name="MeshInstance" type="MeshInstance" parent="."]
 transform = Transform( 0.986667, 0, 0, 0, 0.986667, 0, 0, 0, 1, 0, 1.5, 0.05 )
