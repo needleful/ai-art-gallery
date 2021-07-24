@@ -6,44 +6,44 @@
 [ext_resource path="res://ui/game_theme.tres" type="Theme" id=4]
 [ext_resource path="res://ui/icons/crosshair-ref.png" type="Texture" id=5]
 
-[sub_resource type="StyleBoxFlat" id=10]
+[sub_resource type="StyleBoxFlat" id=1]
 bg_color = Color( 0, 0, 0, 0.309804 )
 
-[sub_resource type="DynamicFont" id=9]
+[sub_resource type="DynamicFont" id=2]
 size = 40
 font_data = ExtResource( 3 )
 
-[sub_resource type="CapsuleMesh" id=1]
+[sub_resource type="CapsuleMesh" id=3]
 radius = 0.09
 mid_height = 0.05
 radial_segments = 12
 rings = 3
 
-[sub_resource type="CapsuleMesh" id=2]
+[sub_resource type="CapsuleMesh" id=4]
 radius = 0.05
 mid_height = 0.07
 radial_segments = 12
 rings = 2
 
-[sub_resource type="BoxShape" id=3]
+[sub_resource type="BoxShape" id=5]
 extents = Vector3( 0.119517, 0.206802, 0.601074 )
 
-[sub_resource type="CapsuleShape" id=4]
+[sub_resource type="CapsuleShape" id=6]
 radius = 0.377257
 height = 0.144836
 
-[sub_resource type="SphereShape" id=5]
+[sub_resource type="SphereShape" id=7]
 radius = 0.402868
 
-[sub_resource type="CapsuleShape" id=6]
+[sub_resource type="CapsuleShape" id=8]
 radius = 0.3
 height = 0.556018
 
-[sub_resource type="CapsuleShape" id=7]
+[sub_resource type="CapsuleShape" id=9]
 radius = 0.35
 height = 0.14
 
-[sub_resource type="SphereShape" id=8]
+[sub_resource type="SphereShape" id=10]
 radius = 0.3
 
 [node name="player" type="RigidBody"]
@@ -95,7 +95,7 @@ anchor_right = 0.9
 anchor_bottom = 0.9
 margin_top = -170.089
 margin_bottom = 0.910767
-custom_styles/panel = SubResource( 10 )
+custom_styles/panel = SubResource( 1 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -114,7 +114,7 @@ __meta__ = {
 [node name="Title" type="Label" parent="ui/art_panel/vbox"]
 margin_right = 799.0
 margin_bottom = 55.0
-custom_fonts/font = SubResource( 9 )
+custom_fonts/font = SubResource( 2 )
 text = "Title"
 
 [node name="Description" type="Label" parent="ui/art_panel/vbox"]
@@ -185,13 +185,13 @@ far = 2000.0
 [node name="head_mesh" type="MeshInstance" parent="torso/neck/head_target/head"]
 transform = Transform( -1, 0, -1.50996e-07, 1.50996e-07, -4.37114e-08, -1, 0, -1, 4.37114e-08, -3.55271e-15, -0.0224062, -0.0718808 )
 layers = 2
-mesh = SubResource( 1 )
+mesh = SubResource( 3 )
 material/0 = null
 
 [node name="neck_mesh" type="MeshInstance" parent="torso/neck"]
 transform = Transform( -1, 0, -1.50996e-07, 1.50996e-07, -4.37114e-08, -1, 0, -1, 4.37114e-08, -3.55271e-15, -0.0118872, -0.0152082 )
 layers = 2
-mesh = SubResource( 2 )
+mesh = SubResource( 4 )
 material/0 = null
 
 [node name="wallArea" type="Area" parent="torso"]
@@ -200,20 +200,20 @@ collision_layer = 0
 
 [node name="CollisionShape" type="CollisionShape" parent="torso/wallArea"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0767169, 1.47501, 0.615619 )
-shape = SubResource( 3 )
+shape = SubResource( 5 )
 
 [node name="col-standing" type="CollisionShape" parent="."]
 transform = Transform( 1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 1.51594, 0.0916411 )
-shape = SubResource( 4 )
+shape = SubResource( 6 )
 
 [node name="col-crouching" type="CollisionShape" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.0724, 0.0820826 )
-shape = SubResource( 5 )
+shape = SubResource( 7 )
 disabled = true
 
 [node name="col-common" type="CollisionShape" parent="."]
 transform = Transform( 1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 0.578522, 0 )
-shape = SubResource( 6 )
+shape = SubResource( 8 )
 
 [node name="headArea" type="Area" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.0724, 0.0820826 )
@@ -221,7 +221,7 @@ collision_layer = 0
 
 [node name="col-standing2" type="CollisionShape" parent="headArea"]
 transform = Transform( 1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 0.44354, 0.0095585 )
-shape = SubResource( 7 )
+shape = SubResource( 9 )
 
 [node name="floorArea" type="Area" parent="."]
 transform = Transform( 1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 0.35, 2.84124e-08 )
@@ -229,4 +229,4 @@ collision_layer = 0
 
 [node name="CollisionShape" type="CollisionShape" parent="floorArea"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.72875e-09, -0.0853038 )
-shape = SubResource( 8 )
+shape = SubResource( 10 )
