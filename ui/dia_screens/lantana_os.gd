@@ -1,6 +1,6 @@
 extends Spatial
 
-export(CharacterAccount) var user_account
+export(Resource) var user_account
 export(NodePath) var screen_control
 
 onready var screen = get_node(screen_control)

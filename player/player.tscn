@@ -140,9 +140,15 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="ref_crosshair" type="Sprite" parent="ui/ref_crosshair"]
-rotation = 0.785398
+[node name="ref_crosshair" type="TextureRect" parent="ui/ref_crosshair"]
+margin_top = -22.0
+margin_right = 32.0
+margin_bottom = 10.0
+rect_rotation = 45.0
 texture = ExtResource( 5 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="model" parent="." instance=ExtResource( 2 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.53, 0 )
