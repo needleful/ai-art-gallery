@@ -104,7 +104,7 @@ nodes/torso/node = SubResource( 14 )
 nodes/torso/position = Vector2( -120, 100 )
 nodes/walk/node = SubResource( 20 )
 nodes/walk/position = Vector2( -420, -140 )
-node_connections = [ "lower", 0, "walk", "lower", 1, "crouch", "move_and_look", 0, "lower", "move_and_look", 1, "torso", "output", 0, "move_and_look" ]
+node_connections = [ "output", 0, "move_and_look", "lower", 0, "walk", "lower", 1, "crouch", "move_and_look", 0, "lower", "move_and_look", 1, "torso" ]
 
 [node name="firstperson" instance=ExtResource( 1 )]
 script = ExtResource( 2 )
@@ -114,12 +114,12 @@ bones/55/bound_children = [ NodePath("weapon") ]
 bones/56/bound_children = [ NodePath("helper1") ]
 bones/57/bound_children = [ NodePath("helper2") ]
 bones/58/bound_children = [ NodePath("sights_attach") ]
-bones/63/bound_children = [ NodePath("attach_footRight") ]
-bones/67/bound_children = [ NodePath("attach_footLeft") ]
+bones/62/bound_children = [ NodePath("attach_footRight") ]
+bones/66/bound_children = [ NodePath("attach_footLeft") ]
 
 [node name="attach_footRight" type="BoneAttachment" parent="Armature/Skeleton" index="1"]
-transform = Transform( -0.999999, -2.82136e-07, 2.54039e-06, 2.55653e-06, -0.114275, 0.99345, 6.04837e-09, 0.993449, 0.114276, -0.116013, -1.45625, 0.0343961 )
-bone_name = "d_toe_r"
+transform = Transform( -1, -1.19209e-07, -2.58442e-08, 2.7474e-08, -0.422502, 0.906363, -1.22935e-07, 0.906362, 0.422502, -0.116013, -1.40965, -0.06557 )
+bone_name = "d_heel_r"
 script = ExtResource( 3 )
 audio_sources = [ ExtResource( 4 ) ]
 
@@ -128,15 +128,15 @@ stream = ExtResource( 5 )
 unit_db = -1.0
 
 [node name="Area" type="Area" parent="Armature/Skeleton/attach_footRight" index="1"]
-transform = Transform( 1, -1.06581e-13, 2.88658e-14, -1.82077e-14, 1, 0, -3.82472e-14, 0, 1, -7.45058e-08, 0.00402483, -0.0349897 )
+transform = Transform( 1, -1.06581e-13, 3.19744e-14, -1.42109e-14, 1, 1.19209e-07, -3.19744e-14, -5.96046e-08, 1, 0, 0.030637, -0.0657237 )
 collision_layer = 0
 
 [node name="CollisionShape" type="CollisionShape" parent="Armature/Skeleton/attach_footRight/Area" index="0"]
 shape = SubResource( 1 )
 
 [node name="attach_footLeft" type="BoneAttachment" parent="Armature/Skeleton" index="2"]
-transform = Transform( -1, 1.30226e-07, -2.6226e-06, -2.62091e-06, -0.114274, 0.993449, -1.7124e-07, 0.993449, 0.114274, 0.116014, -1.45625, 0.0343961 )
-bone_name = "d_toe_l"
+transform = Transform( -1, 4.65661e-10, -9.80217e-08, -8.96398e-08, -0.4225, 0.906363, -4.19095e-08, 0.906363, 0.4225, 0.116014, -1.40965, -0.06557 )
+bone_name = "d_heel_l"
 script = ExtResource( 3 )
 audio_sources = [ ExtResource( 4 ) ]
 
@@ -145,7 +145,7 @@ stream = ExtResource( 5 )
 unit_db = -1.0
 
 [node name="Area" type="Area" parent="Armature/Skeleton/attach_footLeft" index="1"]
-transform = Transform( 1, 1.86259e-09, -7.91631e-09, 4.26326e-14, 1, -4.47035e-08, -2.32922e-09, 0, 1, 1.04308e-07, 0.00402476, -0.0349898 )
+transform = Transform( 1, 1.86261e-09, -7.91631e-09, 4.9738e-14, 1, 1.78814e-07, -2.32932e-09, -1.78814e-07, 1, -2.23517e-08, 0.0306371, -0.0657234 )
 collision_layer = 0
 
 [node name="CollisionShape" type="CollisionShape" parent="Armature/Skeleton/attach_footLeft/Area" index="0"]
