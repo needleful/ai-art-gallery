@@ -200,6 +200,8 @@ albedo_texture = ExtResource( 61 )
 
 [node name="Spatial" type="Spatial"]
 
+[node name="gallery" parent="." instance=ExtResource( 8 )]
+
 [node name="Player" parent="." instance=ExtResource( 1 )]
 transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 2.12139, 0, 20.9724 )
 
@@ -222,309 +224,306 @@ material/0 = null
 [node name="CollisionShape" type="CollisionShape" parent="RigidBody"]
 shape = SubResource( 2 )
 
-[node name="gallery" parent="." instance=ExtResource( 8 )]
-
-[node name="dia_screen" parent="gallery" instance=ExtResource( 11 )]
+[node name="dia_screen" parent="." instance=ExtResource( 11 )]
 transform = Transform( 0.668677, 0.0748825, -0.739773, 2.69898e-09, 0.994916, 0.100709, 0.743554, -0.0673417, 0.665277, 4.71629, 1.67135, 19.5283 )
 
-[node name="art" parent="gallery" instance=ExtResource( 3 )]
+[node name="art" parent="." instance=ExtResource( 3 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0, 14.0767 )
 art_scale = Vector2( 1.5, 1.5 )
 art = ExtResource( 4 )
 title = "a fresco painting of a purple egg screaming at itself"
 medium = "imagenet_6384"
 
-[node name="art4" parent="gallery" instance=ExtResource( 3 )]
+[node name="art4" parent="." instance=ExtResource( 3 )]
 transform = Transform( 1, 0, 1.74846e-07, 0, 1, 0, -1.74846e-07, 0, 1, -1, 0, 9 )
 art_scale = Vector2( 1, 1 )
 art = ExtResource( 7 )
 title = "death mechanism pixels"
 medium = "imagenet_6384"
 
-[node name="art2" parent="gallery" instance=ExtResource( 3 )]
+[node name="art2" parent="." instance=ExtResource( 3 )]
 transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -3, -0.00386417, 19 )
 art_scale = Vector2( 1, 1 )
 art = ExtResource( 5 )
 title = "abstractbeanfactoryfactorybuilder"
 medium = "imagenet_6384"
 
-[node name="art3" parent="gallery" instance=ExtResource( 3 )]
+[node name="art3" parent="." instance=ExtResource( 3 )]
 transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -4, -0.00386417, 19 )
 art_scale = Vector2( 1, 1 )
 art = ExtResource( 6 )
 title = "IObserverStrategyFactoryStrategy"
 medium = "imagenet_6384"
 
-[node name="art5" parent="gallery" instance=ExtResource( 3 )]
+[node name="art5" parent="." instance=ExtResource( 3 )]
 transform = Transform( -1, 0, -1.50996e-07, 0, 1, 0, 1.50996e-07, 0, -1, -1, 0.125474, 19 )
 art_scale = Vector2( 1.5, 1.5 )
 art = ExtResource( 9 )
 title = "raytrace forest crystalline"
 
-[node name="art15" parent="gallery" instance=ExtResource( 3 )]
+[node name="art15" parent="." instance=ExtResource( 3 )]
 transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 7, 0.208792, 18 )
 art_scale = Vector2( 1, 1 )
 art = ExtResource( 20 )
 title = "super sober sabre"
 
-[node name="art17" parent="gallery" instance=ExtResource( 3 )]
+[node name="art17" parent="." instance=ExtResource( 3 )]
 transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 7, 0.314498, 16 )
 art_scale = Vector2( 1, 1 )
 art = ExtResource( 22 )
 title = "baroque pixel art"
 medium = "wikiart_16384"
 
-[node name="art72" parent="gallery" instance=ExtResource( 3 )]
+[node name="art72" parent="." instance=ExtResource( 3 )]
 transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 8, 0, 12.5 )
 art_scale = Vector2( 2, 2 )
 art = ExtResource( 84 )
 title = "an unquantifiable number of rats"
 
-[node name="art6" parent="gallery" instance=ExtResource( 3 )]
+[node name="art6" parent="." instance=ExtResource( 3 )]
 transform = Transform( -1, 0, -1.50996e-07, 0, 1, 0, 1.50996e-07, 0, -1, -1, 0, 13.8964 )
 art_scale = Vector2( 1.75, 1.75 )
 art = ExtResource( 10 )
 title = "an oil painting of tax fraud"
 
-[node name="art23" parent="gallery" instance=ExtResource( 3 )]
+[node name="art23" parent="." instance=ExtResource( 3 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 0.5, 9 )
 art_scale = Vector2( 1, 1 )
 art = ExtResource( 32 )
 title = "magical girl power fantasy"
 medium = "imagenet_16384 (iteration 50)"
 
-[node name="art24" parent="gallery" instance=ExtResource( 3 )]
+[node name="art24" parent="." instance=ExtResource( 3 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 0, 9 )
 art_scale = Vector2( 1, 1 )
 art = ExtResource( 31 )
 title = "magical girl power fantasy"
 medium = "imagenet_16384 (iteration 150)"
 
-[node name="art54" parent="gallery" instance=ExtResource( 3 )]
+[node name="art54" parent="." instance=ExtResource( 3 )]
 transform = Transform( 1, 0, -2.08616e-07, 0, 1, 0, 2.08616e-07, 0, 1, 8.75311, -1, 3.00055 )
 art_scale = Vector2( 1, 1 )
 art = ExtResource( 64 )
 title = "one"
 
-[node name="art53" parent="gallery" instance=ExtResource( 3 )]
+[node name="art53" parent="." instance=ExtResource( 3 )]
 transform = Transform( -1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, -4, 0.207702, 8.02671 )
 art_scale = Vector2( 1, 1 )
 art = ExtResource( 63 )
 title = "zero"
 medium = "imagenet_16384 (custom seed)"
 
-[node name="art7" parent="gallery" instance=ExtResource( 3 )]
+[node name="art7" parent="." instance=ExtResource( 3 )]
 transform = Transform( 1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, 3.7, -1, -3 )
 art_scale = Vector2( 1, 1 )
 art = ExtResource( 12 )
 title = "funny meme raytrace"
 
-[node name="art55" parent="gallery" instance=ExtResource( 3 )]
+[node name="art55" parent="." instance=ExtResource( 3 )]
 transform = Transform( -1, 0, 1.50996e-07, 0, 1, 0, -1.50996e-07, 0, -1, -8, -2, -15.1252 )
 art_scale = Vector2( 1, 1 )
 art = ExtResource( 65 )
 title = "eight"
 
-[node name="art52" parent="gallery" instance=ExtResource( 3 )]
+[node name="art52" parent="." instance=ExtResource( 3 )]
 transform = Transform( -1, 0, 1.50996e-07, 0, 1, 0, -1.50996e-07, 0, -1, 0.81218, 0, 8 )
 art_scale = Vector2( 1, 1 )
 art = ExtResource( 62 )
 title = "zero"
 
-[node name="art57" parent="gallery" instance=ExtResource( 3 )]
+[node name="art57" parent="." instance=ExtResource( 3 )]
 transform = Transform( 1.94707e-07, 0, -1, 0, 1, 0, 1, 0, 1.94707e-07, -10.0939, 0.170994, 12 )
 art_scale = Vector2( 1.5, 1.5 )
 art = ExtResource( 67 )
 title = "rolling hills unreal panorama"
 
-[node name="art56" parent="gallery" instance=ExtResource( 3 )]
+[node name="art56" parent="." instance=ExtResource( 3 )]
 transform = Transform( -1.62921e-07, 0, 1, 0, 1, 0, -1, 0, -1.62921e-07, -9.9005, 0.183688, 12 )
 art_scale = Vector2( 1.4, 1.4 )
 art = ExtResource( 66 )
 title = "foggy vista of seven thousand doors"
 
-[node name="art58" parent="gallery" instance=ExtResource( 3 )]
+[node name="art58" parent="." instance=ExtResource( 3 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -14, 0.119901, 9 )
 art_scale = Vector2( 1, 1 )
 art = ExtResource( 68 )
 title = "traintracks"
 
-[node name="art59" parent="gallery" instance=ExtResource( 3 )]
+[node name="art59" parent="." instance=ExtResource( 3 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -13, 0.119901, 9 )
 art_scale = Vector2( 1, 1 )
 art = ExtResource( 69 )
 title = "lake beach satellite"
 
-[node name="art60" parent="gallery" instance=ExtResource( 3 )]
+[node name="art60" parent="." instance=ExtResource( 3 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -12, 0.119901, 9 )
 art_scale = Vector2( 1, 1 )
 art = ExtResource( 71 )
 title = "caboose"
 
-[node name="art61" parent="gallery" instance=ExtResource( 3 )]
+[node name="art61" parent="." instance=ExtResource( 3 )]
 transform = Transform( -3.05936e-08, 0, -0.699999, 0, 0.7, 0, 0.699899, 0, -3.05979e-08, -3.586, 0.622015, 6 )
 art_scale = Vector2( 1, 1 )
 art = ExtResource( 72 )
 title = "a concise explanation of quantumn mechanics"
 
-[node name="art62" parent="gallery" instance=ExtResource( 3 )]
+[node name="art62" parent="." instance=ExtResource( 3 )]
 transform = Transform( -3.05936e-08, 0, -0.699999, 0, 0.7, 0, 0.699899, 0, -3.05979e-08, -3.586, 0.622015, 7 )
 art_scale = Vector2( 1, 1 )
 art = ExtResource( 73 )
 title = "portrait of socrates"
 medium = "wikiart_16384"
 
-[node name="art63" parent="gallery" instance=ExtResource( 3 )]
+[node name="art63" parent="." instance=ExtResource( 3 )]
 transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 4.8, 0, 5 )
 art_scale = Vector2( 1, 1 )
 art = ExtResource( 74 )
 title = "love"
 medium = "wikiart_16384"
 
-[node name="art64" parent="gallery" instance=ExtResource( 3 )]
+[node name="art64" parent="." instance=ExtResource( 3 )]
 transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 4.8, 0, 7 )
 art_scale = Vector2( 1, 1 )
 art = ExtResource( 75 )
 title = "beauty"
 medium = "wikiart_16384"
 
-[node name="art65" parent="gallery" instance=ExtResource( 3 )]
+[node name="art65" parent="." instance=ExtResource( 3 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.5, 0, 4 )
 art_scale = Vector2( 1, 1 )
 art = ExtResource( 76 )
 title = "war"
 medium = "wikiart_16384"
 
-[node name="art66" parent="gallery" instance=ExtResource( 3 )]
+[node name="art66" parent="." instance=ExtResource( 3 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3.5, 0, 4 )
 art_scale = Vector2( 1, 1 )
 art = ExtResource( 77 )
 title = "peace"
 medium = "wikiart_16384"
 
-[node name="Path" type="Path" parent="gallery"]
+[node name="Path" type="Path" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -13, 1.04385, 12 )
 curve = SubResource( 3 )
 
-[node name="PathFollow" type="PathFollow" parent="gallery/Path"]
-transform = Transform( -0.995004, 0.000577489, -0.0998149, 0.000281155, 0.999995, 0.00298203, 0.0998304, 0.00293949, -0.994857, 1.24484, -9.32217e-05, 0.0540915 )
-offset = 8.00615
+[node name="PathFollow" type="PathFollow" parent="Path"]
+transform = Transform( -0.995004, 0.000297737, -0.0998146, -2.91038e-11, 0.999995, 0.00298203, 0.0998294, 0.00296755, -0.994857, 1.24484, -9.32217e-05, 0.0540915 )
 rotation_mode = 4
 
-[node name="KinematicBody" type="KinematicBody" parent="gallery/Path/PathFollow"]
+[node name="KinematicBody" type="KinematicBody" parent="Path/PathFollow"]
 transform = Transform( -0.7, -2.91038e-11, -2.23517e-07, 0, 0.7, 2.32831e-10, 2.23517e-07, 0, -0.7, 0, 0, 0 )
 
-[node name="CollisionShape" type="CollisionShape" parent="gallery/Path/PathFollow/KinematicBody"]
+[node name="CollisionShape" type="CollisionShape" parent="Path/PathFollow/KinematicBody"]
 transform = Transform( 1, -5.82077e-11, -1.49012e-08, 1.74623e-10, 1, 0, 0, 0, 1, 1.90735e-06, 0.0991782, -1.90735e-06 )
 shape = SubResource( 4 )
 
-[node name="train_caboose" parent="gallery/Path/PathFollow" instance=ExtResource( 70 )]
+[node name="train_caboose" parent="Path/PathFollow" instance=ExtResource( 70 )]
 transform = Transform( -0.7, 0, -2.28089e-07, 0, 0.7, 0, 2.28089e-07, 0, -0.7, 0, 0, 0 )
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="gallery/Path"]
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Path"]
 autoplay = "drive"
 anims/drive = SubResource( 5 )
 
-[node name="art51" parent="gallery" instance=ExtResource( 3 )]
+[node name="art51" parent="." instance=ExtResource( 3 )]
 transform = Transform( -1, 0, 1.50996e-07, 0, 1, 0, -1.50996e-07, 0, -1, 3.67751, -0.864883, 1.0221 )
 art_scale = Vector2( 1, 1 )
 art = ExtResource( 60 )
 title = "kawaii nazi propoganda"
 
-[node name="art8" parent="gallery" instance=ExtResource( 3 )]
+[node name="art8" parent="." instance=ExtResource( 3 )]
 transform = Transform( -1.07285e-07, 0, 1, 0, 1, 0, -1, 0, -1.07285e-07, 4.7, -0.8, -3.03039 )
 art_scale = Vector2( 1, 1 )
 art = ExtResource( 13 )
 title = "sans undertale"
 
-[node name="art9" parent="gallery" instance=ExtResource( 3 )]
+[node name="art9" parent="." instance=ExtResource( 3 )]
 transform = Transform( -1.07285e-07, 0, 1, 0, 1, 0, -1, 0, -1.07285e-07, 4.7, -0.8, -4.23039 )
 art_scale = Vector2( 1, 1 )
 art = ExtResource( 14 )
 title = "tracer overwatch"
 
-[node name="art10" parent="gallery" instance=ExtResource( 3 )]
+[node name="art10" parent="." instance=ExtResource( 3 )]
 transform = Transform( -1.07285e-07, 0, 1, 0, 1, 0, -1, 0, -1.07285e-07, 4.7, -0.8, -5.43039 )
 art_scale = Vector2( 1, 1 )
 art = ExtResource( 15 )
 title = "sans overwatch"
 
-[node name="art11" parent="gallery" instance=ExtResource( 3 )]
+[node name="art11" parent="." instance=ExtResource( 3 )]
 transform = Transform( -1.07285e-07, 0, 1, 0, 1, 0, -1, 0, -1.07285e-07, 4.7, -0.8, -6.63039 )
 art_scale = Vector2( 1, 1 )
 art = ExtResource( 16 )
 title = "tracer undertale"
 
-[node name="art12" parent="gallery" instance=ExtResource( 3 )]
+[node name="art12" parent="." instance=ExtResource( 3 )]
 transform = Transform( 1, 0, 6.35732e-08, 0, 1, 0, -6.35732e-08, 0, 1, 5.8, -0.8, -8 )
 art_scale = Vector2( 1, 1 )
 art = ExtResource( 17 )
 title = "sans and tracer are friends in underwatch"
 
-[node name="art44" parent="gallery" instance=ExtResource( 3 )]
+[node name="art44" parent="." instance=ExtResource( 3 )]
 transform = Transform( 1, 0, 6.35732e-08, 0, 1, 0, -6.35732e-08, 0, 1, 7.8, -0.8, -8 )
 art_scale = Vector2( 1, 1 )
 art = ExtResource( 54 )
 title = "new york city after the bombs"
 
-[node name="art45" parent="gallery" instance=ExtResource( 3 )]
+[node name="art45" parent="." instance=ExtResource( 3 )]
 transform = Transform( -1, 0, -2.14569e-07, 0, 1, 0, 2.14569e-07, 0, -1, 6.27621, -1, 7.49529 )
 art_scale = Vector2( 1, 1 )
 art = ExtResource( 55 )
 title = "Jak 3 The Video Game"
 
-[node name="art13" parent="gallery" instance=ExtResource( 3 )]
+[node name="art13" parent="." instance=ExtResource( 3 )]
 transform = Transform( 1, 0, 1.1921e-07, 0, 1, 0, -1.1921e-07, 0, 1, 9.8, -0.8, -8 )
 art_scale = Vector2( 1, 1 )
 art = ExtResource( 18 )
 title = "trance underwatch"
 
-[node name="art14" parent="gallery" instance=ExtResource( 3 )]
+[node name="art14" parent="." instance=ExtResource( 3 )]
 transform = Transform( 7.54976e-08, 0, -1, 0, 1, 0, 1, 0, 7.54976e-08, 7.89565, -1, -1.26913 )
 art_scale = Vector2( 1, 1 )
 art = ExtResource( 19 )
 title = "sneed, hilarity ensues"
 medium = "wikiart_16384"
 
-[node name="art16" parent="gallery" instance=ExtResource( 3 )]
+[node name="art16" parent="." instance=ExtResource( 3 )]
 transform = Transform( -1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 9.354, -0.7, -0.03 )
 art_scale = Vector2( 1, 1 )
 art = ExtResource( 21 )
 title = "me in the family guy style"
 
-[node name="art18" parent="gallery" instance=ExtResource( 3 )]
+[node name="art18" parent="." instance=ExtResource( 3 )]
 transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 7.89565, -1, -2.96913 )
 art_scale = Vector2( 1, 1 )
 art = ExtResource( 23 )
 title = "let's go fresco redditor"
 
-[node name="art19" parent="gallery" instance=ExtResource( 3 )]
+[node name="art19" parent="." instance=ExtResource( 3 )]
 transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 7.89565, -1, -4.66913 )
 art_scale = Vector2( 1, 1 )
 art = ExtResource( 24 )
 title = "big chungus"
 
-[node name="art20" parent="gallery" instance=ExtResource( 3 )]
-transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 10.7, -0.9, -5.2 )
+[node name="art20" parent="." instance=ExtResource( 3 )]
+transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 10.7, -0.9, -4.2 )
 art_scale = Vector2( 1, 1 )
 art = ExtResource( 25 )
 title = "jumpscare"
 medium = "wikiart_16384"
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="gallery/art20"]
+[node name="AnimationPlayer" type="AnimationPlayer" parent="art20"]
 anims/reset = SubResource( 6 )
 anims/scare = SubResource( 7 )
 
-[node name="jumpscare" type="Area" parent="gallery/art20"]
+[node name="jumpscare" type="Area" parent="art20"]
 collision_layer = 16
 collision_mask = 0
 script = ExtResource( 28 )
 
-[node name="CollisionShape" type="CollisionShape" parent="gallery/art20/jumpscare"]
+[node name="CollisionShape" type="CollisionShape" parent="art20/jumpscare"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.22951, 1.16193 )
 shape = SubResource( 8 )
 
-[node name="screamer" type="KinematicBody" parent="gallery/art20"]
+[node name="screamer" type="KinematicBody" parent="art20"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.4459, -0.293088 )
 collision_layer = 16
 collision_mask = 2147483648
@@ -532,189 +531,189 @@ script = ExtResource( 27 )
 title = "screamer"
 medium = "gumbell_8192"
 
-[node name="MeshInstance2" type="MeshInstance" parent="gallery/art20/screamer"]
+[node name="MeshInstance2" type="MeshInstance" parent="art20/screamer"]
 transform = Transform( 1, 0, -3.55271e-15, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
 mesh = SubResource( 9 )
 material/0 = SubResource( 10 )
 
-[node name="CollisionShape" type="CollisionShape" parent="gallery/art20/screamer"]
+[node name="CollisionShape" type="CollisionShape" parent="art20/screamer"]
 transform = Transform( 1, 0, -3.55271e-15, 0, 1, 0, 0, 0, 1, 0, 0, -0.0394821 )
 shape = SubResource( 11 )
 
-[node name="art21" parent="gallery" instance=ExtResource( 3 )]
-transform = Transform( 2.50344e-07, 0, -1, 0, 1, 0, 1, 0, 2.50344e-07, 10.7, -0.9, -3.5 )
+[node name="art21" parent="." instance=ExtResource( 3 )]
+transform = Transform( 2.50344e-07, 0, -1, 0, 1, 0, 1, 0, 2.50344e-07, 10.7, -0.9, -1.5 )
 art_scale = Vector2( 1, 1 )
 art = ExtResource( 29 )
 title = "sans undertale rococo"
 
-[node name="art22" parent="gallery" instance=ExtResource( 3 )]
+[node name="art22" parent="." instance=ExtResource( 3 )]
 transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 10.8537, -0.3, -6.03039 )
 art_scale = Vector2( 1.2, 1.2 )
 art = ExtResource( 30 )
 title = "baroque pixel art but this time I don't run out of memory"
 medium = "wikiart_16384"
 
-[node name="art50" parent="gallery" instance=ExtResource( 3 )]
+[node name="art50" parent="." instance=ExtResource( 3 )]
 transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 9.98468, -1, 7 )
 art_scale = Vector2( 1, 1 )
 art = ExtResource( 59 )
 title = "a comfortable bench"
 
-[node name="art26" parent="gallery" instance=ExtResource( 3 )]
+[node name="art26" parent="." instance=ExtResource( 3 )]
 transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 8.1, -1, -4.5 )
 art_scale = Vector2( 1, 1 )
 art = ExtResource( 34 )
 title = "midna"
 
-[node name="art27" parent="gallery" instance=ExtResource( 3 )]
+[node name="art27" parent="." instance=ExtResource( 3 )]
 transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 8.1, -1, -3 )
 art_scale = Vector2( 1, 1 )
 art = ExtResource( 35 )
 title = "oil painting of carl wheezer"
 
-[node name="art49" parent="gallery" instance=ExtResource( 3 )]
+[node name="art49" parent="." instance=ExtResource( 3 )]
 transform = Transform( -1, 0, -1.50996e-07, 0, 1, 0, 1.50996e-07, 0, -1, 9, -1, 9.50303 )
 art_scale = Vector2( 1, 1 )
 art = ExtResource( 58 )
 title = "even more baroque pixel art"
 
-[node name="art25" parent="gallery" instance=ExtResource( 3 )]
+[node name="art25" parent="." instance=ExtResource( 3 )]
 transform = Transform( 1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, 9.92788, -1, 4.46517 )
 art_scale = Vector2( 1.5, 1.5 )
 art = ExtResource( 33 )
 title = "floor plans of an art gallery"
 
-[node name="art28" parent="gallery" instance=ExtResource( 3 )]
+[node name="art28" parent="." instance=ExtResource( 3 )]
 transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 8.1, -1, -1.5 )
 art_scale = Vector2( 1, 1 )
 art = ExtResource( 36 )
 title = "Jak 3"
 
-[node name="art32" parent="gallery" instance=ExtResource( 3 )]
-transform = Transform( 7.54979e-08, 0, -1, 0, 1, 0, 1, 0, 7.54979e-08, 10.706, -0.9, -1.716 )
+[node name="art32" parent="." instance=ExtResource( 3 )]
+transform = Transform( 7.54979e-08, 0, -1, 0, 1, 0, 1, 0, 7.54979e-08, 10.706, -0.9, -6.716 )
 art_scale = Vector2( 1, 1 )
 art = ExtResource( 40 )
 title = "is this loss"
 
-[node name="art37" parent="gallery" instance=ExtResource( 3 )]
+[node name="art37" parent="." instance=ExtResource( 3 )]
 transform = Transform( 1.94707e-07, 0, -1, 0, 1, 0, 1, 0, 1.94707e-07, -10.3, -4.7, -14 )
 art_scale = Vector2( 1, 1 )
 art = ExtResource( 48 )
 title = "cabin on the beach"
 medium = "wikiart_16384"
 
-[node name="art38" parent="gallery" instance=ExtResource( 3 )]
+[node name="art38" parent="." instance=ExtResource( 3 )]
 transform = Transform( 1.94707e-07, 0, -1, 0, 1, 0, 1, 0, 1.94707e-07, -10.3, -4.7, -12.7 )
 art_scale = Vector2( 1, 1 )
 art = ExtResource( 47 )
 title = "cabin on the beack"
 medium = "wikiart_16384"
 
-[node name="art39" parent="gallery" instance=ExtResource( 3 )]
+[node name="art39" parent="." instance=ExtResource( 3 )]
 transform = Transform( 1.94707e-07, 0, -1, 0, 1, 0, 1, 0, 1.94707e-07, -10.3, -4.7, -11.4 )
 art_scale = Vector2( 1, 1 )
 art = ExtResource( 49 )
 title = "cnaib o n teh baeck"
 medium = "wikiart_16384"
 
-[node name="art36" parent="gallery" instance=ExtResource( 3 )]
+[node name="art36" parent="." instance=ExtResource( 3 )]
 transform = Transform( -1, 0, -1.50996e-07, 0, 1, 0, 1.50996e-07, 0, -1, -12.35, -4, -9.218 )
 art_scale = Vector2( 3, 3 )
 art = ExtResource( 46 )
 title = "dead cold"
 medium = "wikiart_16384"
 
-[node name="art41" parent="gallery" instance=ExtResource( 3 )]
+[node name="art41" parent="." instance=ExtResource( 3 )]
 transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -14.3166, -5.0703, -17 )
 art_scale = Vector2( 1.2, 1.2 )
 art = ExtResource( 51 )
 title = "best art ever"
 medium = "wikiart_16384"
 
-[node name="art42" parent="gallery" instance=ExtResource( 3 )]
+[node name="art42" parent="." instance=ExtResource( 3 )]
 transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -14.3166, -4.36049, -17 )
 art_scale = Vector2( 1.2, 1.2 )
 art = ExtResource( 52 )
 title = "the only painting"
 medium = "wikiart_16384"
 
-[node name="art43" parent="gallery" instance=ExtResource( 3 )]
+[node name="art43" parent="." instance=ExtResource( 3 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 4, -4.82161, -19 )
 art_scale = Vector2( 1, 1 )
 art = ExtResource( 53 )
 title = "loli composite watercolor"
 
-[node name="art48" parent="gallery" instance=ExtResource( 3 )]
+[node name="art48" parent="." instance=ExtResource( 3 )]
 transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -14.2537, -4.89386, -14 )
 art_scale = Vector2( 1, 1 )
 art = ExtResource( 57 )
 title = "child standing at the bottom of the ocean"
 medium = "wikiart_16384"
 
-[node name="art47" parent="gallery" instance=ExtResource( 3 )]
+[node name="art47" parent="." instance=ExtResource( 3 )]
 transform = Transform( 7.54979e-08, 0, 1, 0, 1, 0, -1, 0, 7.54979e-08, -9.03538, 0, 7 )
 art_scale = Vector2( 1, 1 )
 art = ExtResource( 30 )
 title = "baroque pixel art but this time I don't run out of memory"
 medium = "wikiart_16384"
 
-[node name="art35" parent="gallery" instance=ExtResource( 3 )]
+[node name="art35" parent="." instance=ExtResource( 3 )]
 transform = Transform( 7.54979e-08, 0, 1, 0, 1, 0, -1, 0, 7.54979e-08, -6.31837, -1, -9 )
 art_scale = Vector2( 1, 1 )
 art = ExtResource( 45 )
 title = "why are we so afraid"
 
-[node name="art71" parent="gallery" instance=ExtResource( 3 )]
+[node name="art71" parent="." instance=ExtResource( 3 )]
 transform = Transform( 7.54979e-08, 0, 1, 0, 1, 0, -1, 0, 7.54979e-08, -6.31837, -1, -11 )
 art_scale = Vector2( 1, 1 )
 art = ExtResource( 82 )
 title = "fresco oils realtime raytraced"
 
-[node name="art67" parent="gallery" instance=ExtResource( 3 )]
+[node name="art67" parent="." instance=ExtResource( 3 )]
 transform = Transform( 1, 0, -1.19209e-07, 0, 1, 0, 1.19209e-07, 0, 1, -8.31837, -0.763505, -8 )
 art_scale = Vector2( 1, 1 )
 art = ExtResource( 79 )
 title = "diagram of a hand"
 medium = "wikiart_16384"
 
-[node name="art70" parent="gallery" instance=ExtResource( 3 )]
+[node name="art70" parent="." instance=ExtResource( 3 )]
 transform = Transform( 1, 0, -1.19209e-07, 0, 1, 0, 1.19209e-07, 0, 1, -7.31837, -0.763505, -8 )
 art_scale = Vector2( 1, 1 )
 art = ExtResource( 81 )
 title = "hand with fingers"
 medium = "wikiart_16384"
 
-[node name="art68" parent="gallery" instance=ExtResource( 3 )]
+[node name="art68" parent="." instance=ExtResource( 3 )]
 transform = Transform( 1, 0, -1.19209e-07, 0, 1, 0, 1.19209e-07, 0, 1, -9.31837, -0.763505, -8 )
 art_scale = Vector2( 1, 1 )
 art = ExtResource( 78 )
 title = "hand"
 medium = "wikiart_16384"
 
-[node name="door_panel_pin" parent="gallery" instance=ExtResource( 42 )]
+[node name="door_panel_pin" parent="." instance=ExtResource( 42 )]
 transform = Transform( -1, 0, 1.50996e-07, 0, 1, 0, -1.50996e-07, 0, -1, 5.68571, -3.25555, -15.2202 )
 door_name = "The Red Door"
 door_node = NodePath("../RedDoor")
 pin = "0018"
 
-[node name="RedDoor" type="KinematicBody" parent="gallery"]
+[node name="RedDoor" type="KinematicBody" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 6.75, -3.5, -16.2 )
 script = ExtResource( 43 )
 __meta__ = {
 "_edit_group_": true
 }
 
-[node name="MeshInstance" type="MeshInstance" parent="gallery/RedDoor"]
+[node name="MeshInstance" type="MeshInstance" parent="RedDoor"]
 mesh = SubResource( 12 )
 material/0 = SubResource( 13 )
 
-[node name="CollisionShape" type="CollisionShape" parent="gallery/RedDoor"]
+[node name="CollisionShape" type="CollisionShape" parent="RedDoor"]
 shape = SubResource( 14 )
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="gallery/RedDoor"]
+[node name="AnimationPlayer" type="AnimationPlayer" parent="RedDoor"]
 anims/open = SubResource( 15 )
 
-[node name="art" type="KinematicBody" parent="gallery/RedDoor"]
+[node name="art" type="KinematicBody" parent="RedDoor"]
 transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -0.622195, 0, 0 )
 collision_layer = 16
 collision_mask = 0
@@ -722,58 +721,58 @@ script = ExtResource( 27 )
 title = "red door"
 medium = "imagenet_16284"
 
-[node name="CollisionShape" type="CollisionShape" parent="gallery/RedDoor/art"]
+[node name="CollisionShape" type="CollisionShape" parent="RedDoor/art"]
 shape = SubResource( 16 )
 
-[node name="MeshInstance" type="MeshInstance" parent="gallery/RedDoor/art"]
+[node name="MeshInstance" type="MeshInstance" parent="RedDoor/art"]
 mesh = SubResource( 17 )
 material/0 = SubResource( 18 )
 
-[node name="art29" parent="gallery" instance=ExtResource( 3 )]
+[node name="art29" parent="." instance=ExtResource( 3 )]
 transform = Transform( -1, 0, -1.50996e-07, 0, 1, 0, 1.50996e-07, 0, -1, 10.2, -5, -13.228 )
 art_scale = Vector2( 1, 1 )
 art = ExtResource( 37 )
 title = "cuckold radiation"
 
-[node name="art30" parent="gallery" instance=ExtResource( 3 )]
+[node name="art30" parent="." instance=ExtResource( 3 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 9, -5, -19.076 )
 art_scale = Vector2( 1, 1 )
 art = ExtResource( 38 )
 title = "acrylic paint is capable of feeling pain"
 
-[node name="art31" parent="gallery" instance=ExtResource( 3 )]
+[node name="art31" parent="." instance=ExtResource( 3 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 12, -5, -19.076 )
 art_scale = Vector2( 1, 1 )
 art = ExtResource( 39 )
 title = "resting rapist face"
 
-[node name="art40" parent="gallery" instance=ExtResource( 3 )]
+[node name="art40" parent="." instance=ExtResource( 3 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 15, -5, -19.076 )
 art_scale = Vector2( 1, 1 )
 art = ExtResource( 50 )
 title = "idort idiot idort this is nonsense words fucking make something computer make something out of this verbal puke"
 medium = "wikiart_16384"
 
-[node name="art33" parent="gallery" instance=ExtResource( 3 )]
+[node name="art33" parent="." instance=ExtResource( 3 )]
 transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 18.6509, -4.84391, -17.076 )
 art_scale = Vector2( 1.2, 1.2 )
 art = ExtResource( 41 )
 title = "splatoon porn pixel art"
 
-[node name="art46" parent="gallery" instance=ExtResource( 3 )]
+[node name="art46" parent="." instance=ExtResource( 3 )]
 transform = Transform( -1, 0, 1.50996e-07, 0, 1, 0, -1.50996e-07, 0, -1, 11.8, -5, -13.186 )
 art_scale = Vector2( 1, 1 )
 art = ExtResource( 56 )
 title = "untermensch"
 medium = "wikiart_16384"
 
-[node name="art34" parent="gallery" instance=ExtResource( 3 )]
+[node name="art34" parent="." instance=ExtResource( 3 )]
 transform = Transform( -1, 0, 1.50996e-07, 0, 1, 0, -1.50996e-07, 0, -1, 14.7734, -5, -15.1976 )
 art_scale = Vector2( 1, 1 )
 art = ExtResource( 44 )
 title = "cruel love expressed as a sculpture"
 
-[node name="art69" parent="gallery" instance=ExtResource( 3 )]
+[node name="art69" parent="." instance=ExtResource( 3 )]
 transform = Transform( -1, 0, -1.50996e-07, 0, 1, 0, 1.50996e-07, 0, -1, 16.6123, -5, -15.1722 )
 art_scale = Vector2( 1, 1 )
 art = ExtResource( 80 )
@@ -782,6 +781,6 @@ medium = "wikiart_16384"
 
 [node name="bench" parent="." instance=ExtResource( 83 )]
 transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -9.76955, -1, -3 )
-[connection signal="body_entered" from="gallery/art20/jumpscare" to="gallery/art20/jumpscare" method="_on_jumpscare_body_entered"]
-[connection signal="body_exited" from="gallery/art20/jumpscare" to="gallery/art20/jumpscare" method="_on_jumpscare_body_exited"]
-[connection signal="door_lock" from="gallery/door_panel_pin" to="gallery/RedDoor" method="_on_door_panel_pin_door_lock"]
+[connection signal="body_entered" from="art20/jumpscare" to="art20/jumpscare" method="_on_jumpscare_body_entered"]
+[connection signal="body_exited" from="art20/jumpscare" to="art20/jumpscare" method="_on_jumpscare_body_exited"]
+[connection signal="door_lock" from="door_panel_pin" to="RedDoor" method="_on_door_panel_pin_door_lock"]
