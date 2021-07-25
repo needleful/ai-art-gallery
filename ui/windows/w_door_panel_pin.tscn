@@ -37,5 +37,4 @@ margin_right = -5.0
 margin_bottom = -5.0
 
 [node name="cursorLayer" parent="." instance=ExtResource( 4 )]
-
 [connection signal="pin_approved" from="pin_pad" to="." method="toggle_lock"]

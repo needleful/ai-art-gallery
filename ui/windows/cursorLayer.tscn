@@ -1,8 +1,6 @@
 [gd_scene load_steps=2 format=2]
 
-[sub_resource type="StreamTexture" id=1]
-flags = 4
-load_path = "res://.import/cursor_test.png-d027b9f2b8c078b0aa66e9eed1b7c474.stex"
+[ext_resource path="res://ui/icons/cursor.png" type="Texture" id=1]
 
 [node name="cursorLayer" type="CanvasLayer"]
 
@@ -10,4 +8,4 @@ load_path = "res://.import/cursor_test.png-d027b9f2b8c078b0aa66e9eed1b7c474.stex
 
 [node name="sprite" type="Sprite" parent="cursor"]
 position = Vector2( 7, 7 )
-texture = SubResource( 1 )
+texture = ExtResource( 1 )

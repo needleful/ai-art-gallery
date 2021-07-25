@@ -116,6 +116,7 @@ margin_right = 799.0
 margin_bottom = 55.0
 custom_fonts/font = SubResource( 2 )
 text = "Title"
+autowrap = true
 
 [node name="Description" type="Label" parent="ui/art_panel/vbox"]
 margin_top = 59.0
@@ -180,7 +181,8 @@ collision_mask = 25
 transform = Transform( -1, 0, -1.50996e-07, 0, 1, 0, 1.50996e-07, 0, -1, 0, 0, 0 )
 cull_mask = 1048569
 fov = 80.0
-far = 2000.0
+near = 0.01
+far = 500.0
 
 [node name="head_mesh" type="MeshInstance" parent="torso/neck/head_target/head"]
 transform = Transform( -1, 0, -1.50996e-07, 1.50996e-07, -4.37114e-08, -1, 0, -1, 4.37114e-08, -3.55271e-15, -0.0224062, -0.0718808 )

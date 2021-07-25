@@ -25,5 +25,4 @@ material_override = SubResource( 2 )
 [node name="w_door_panel_pin" parent="Viewport" index="0" instance=ExtResource( 2 )]
 margin_right = 0.0
 margin_bottom = 1.52588e-05
-
 [connection signal="door_lock" from="Viewport/w_door_panel_pin" to="." method="emit_locked"]

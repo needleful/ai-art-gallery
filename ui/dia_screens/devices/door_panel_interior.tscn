@@ -23,6 +23,5 @@ control_node = NodePath("Viewport/Panel")
 material_override = SubResource( 2 )
 
 [node name="Panel" parent="Viewport" index="0" instance=ExtResource( 3 )]
-
 [connection signal="door_lock" from="Viewport/Panel" to="." method="emit_locked"]
 [connection signal="lights" from="Viewport/Panel" to="." method="set_lights"]

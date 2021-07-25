@@ -1,0 +1,5 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://env/train_caboose.glb" type="PackedScene" id=1]
+
+[node name="train_caboose" instance=ExtResource( 1 )]
