@@ -554,7 +554,7 @@ title = "baroque pixel art but this time I don't run out of memory"
 medium = "wikiart_16384"
 
 [node name="art50" parent="." instance=ExtResource( 3 )]
-transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 9.98468, -1, 7 )
+transform = Transform( 1, 0, 1.06581e-14, 0, 1, 0, -1.06581e-14, 0, 1, -1.98809, -5, -19 )
 art_scale = Vector2( 1, 1 )
 art = ExtResource( 59 )
 title = "a comfortable bench"
@@ -664,7 +664,7 @@ art = ExtResource( 45 )
 title = "why are we so afraid"
 
 [node name="art71" parent="." instance=ExtResource( 3 )]
-transform = Transform( 7.54979e-08, 0, 1, 0, 1, 0, -1, 0, 7.54979e-08, -6.31837, -1, -11 )
+transform = Transform( 7.54979e-08, 0, -1, 0, 1, 0, 1, 0, 7.54979e-08, 9.94887, -1, 7 )
 art_scale = Vector2( 1, 1 )
 art = ExtResource( 82 )
 title = "fresco oils realtime raytraced"
@@ -780,7 +780,7 @@ title = "sleeping woman"
 medium = "wikiart_16384"
 
 [node name="bench" parent="." instance=ExtResource( 83 )]
-transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -9.76955, -1, -3 )
+transform = Transform( 1, 0, 2.38419e-07, 0, 1, 0, -2.38419e-07, 0, 1, 0.230448, -5, -18.9363 )
 [connection signal="body_entered" from="art20/jumpscare" to="art20/jumpscare" method="_on_jumpscare_body_entered"]
 [connection signal="body_exited" from="art20/jumpscare" to="art20/jumpscare" method="_on_jumpscare_body_exited"]
 [connection signal="door_lock" from="door_panel_pin" to="RedDoor" method="_on_door_panel_pin_door_lock"]
