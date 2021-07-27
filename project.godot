@@ -58,7 +58,7 @@ _global_script_class_icons={
 
 config/name="needleful's AI Art Gallery"
 run/main_scene="res://main_scene.tscn"
-config/icon="res://icon.png"
+config/icon="res://art/wikiart_16384/baroque pixel art.png"
 
 [display]
 

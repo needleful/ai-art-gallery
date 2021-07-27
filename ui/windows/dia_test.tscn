@@ -35,7 +35,6 @@ __meta__ = {
 }
 
 [node name="page1" type="Control" parent="Panel"]
-visible = false
 anchor_left = 0.05
 anchor_top = 0.05
 anchor_right = 0.95
@@ -215,6 +214,7 @@ text = "All artwork was generated with the VQGAN+CLIP system.
 autowrap = true
 
 [node name="page3" type="Control" parent="Panel"]
+visible = false
 anchor_left = 0.05
 anchor_top = 0.05
 anchor_right = 0.95
