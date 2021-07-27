@@ -14,11 +14,6 @@ _global_script_classes=[ {
 "language": "GDScript",
 "path": "res://addons/fast_options/scripts/audio_channel.gd"
 }, {
-"base": "Resource",
-"class": "CharacterAccount",
-"language": "GDScript",
-"path": "res://npc/account.gd"
-}, {
 "base": "Node",
 "class": "ControlsOptions",
 "language": "GDScript",
@@ -51,7 +46,6 @@ _global_script_classes=[ {
 } ]
 _global_script_class_icons={
 "AudioChannel": "",
-"CharacterAccount": "",
 "ControlsOptions": "",
 "DiaScreen": "",
 "EntPlayer": "",

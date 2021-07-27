@@ -27,11 +27,11 @@ enum State {
 	Air,
 	Locked
 }
-const speed = 5
+const speed = 3.5
 const jump_vel = 4
 
 const accel_min = 0
-const accel_max = 30
+const accel_max = 25
 const accel_turn = 15
 const deaccel = 20
 
